@@ -12,7 +12,7 @@ async function generateAIContent(
   hashtags,
   emojis
 ) {
-  const genAI = new GoogleGenerativeAI(import.meta.env.VITE_GEMINI_KEY);
+  const genAI = new GoogleGenerativeAI("AIzaSyBqoAWDpiYwpnhPbykB8mn7oARssYRg5BM");
   const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
 
   const prompt = `Rewrite the following text to be exactly ${Words} words long.  
@@ -121,7 +121,7 @@ const TextEnhancer = () => {
               <select
                 value={style}
                 onChange={(e) => setstyle(e.target.value)}
-                className="hover:bg-gray-50 w-full p-2 border border-gray-200 rounded-lg bg-white text-gray-700 focus:outline-none focus:ring-1 focus:ring-blue-500 focus:border-transparent dark:bg-gray-700 dark:border-gray-500 dark:text-white dark:hover:bg-gray-800 "
+                className="hover:bg-gray-50 w-full p-2 border border-gray-200 rounded-lg bg-white text-gray-700 focus:outline-none focus:ring-1 focus:ring-blue-500 focus:border-transparent dark:bg-gray-700 dark:border-gray-500 dark:text-white dark:hover:bg-gray-800"
               >
                 {styleOptions.map((style) => (
                   <option key={style} value={style}>
